@@ -37,7 +37,7 @@ if ingredients_list:
         
     
     # Fetch data from Fruityvice API
-    fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+fruit_chosen)
+    fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon"+fruit_chosen)
     fv_df = st.dataframe(data=fruityvice_response.json(), use_container_width=True)
 
     # Create insert statement for Snowflake
