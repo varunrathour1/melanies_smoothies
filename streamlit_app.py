@@ -2,7 +2,7 @@
 import streamlit as st
 #from snowflake.snowpark.context import get_active_session
 from snowflake.snowpark.functions import col
-import requests
+
 
 # Write directly to the app
 st.title(":cup_with_straw: Customise your Smoothie :cup_with_straw:")
@@ -45,6 +45,7 @@ if ingredients_list:
         st.success(f'Your Smoothie is ordered, {name_on_order}!', icon="✅")
 
 # Fruityvice API request and display data in a dataframe
+import requests
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
 
 # Display the API response data in a dataframe
