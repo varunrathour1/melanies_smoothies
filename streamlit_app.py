@@ -36,9 +36,9 @@ if ingredients_list:
         st.subheader(fruit_chosen + 'Nutrition Information')
         
     
-    # Fetch data from Fruityvice API
-    fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon"+fruit_chosen)
-    fv_df = st.dataframe(data=fruityvice_response.json(), use_container_width=True)
+        # Fetch data from Fruityvice API
+        fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_chosen)
+        fv_df = st.dataframe(data=fruityvice_response.json(), use_container_width=True)
 
     # Create insert statement for Snowflake
     my_insert_stmt = f""" 
